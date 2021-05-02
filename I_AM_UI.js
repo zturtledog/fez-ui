@@ -22,6 +22,7 @@ function I_AM_UI_Create_UI_engine(ammount)
     dragging[i] = false;
     boolean_index[i] = false;
     color_dragging[i] = false;
+    slider_index[i] = 0;
     color_SH = 0;
     colorPosX[i] = 0;
     colorPosY[i] = 0;
@@ -63,12 +64,12 @@ function I_AM_UI_Slider(x,y,min,max,w,h,i,d,c)
     if (d == 1)
     {
       slider_index[i] = mouseX-x;
-      slider_map[i] = (map(mouseX-x,0,width,min,max));
+      slider_map[i] = round(map(mouseX-x,0,x,min,max))*2;
       dragging[i] = false;
     }else
     {
       slider_index[i] = mouseY-y;
-      slider_map[i] = (map(mouseY-y,0,height,min,max));
+      slider_map[i] = round(map(mouseY-y, 0, y, min, max))*2;
       dragging[i] = false;
     }
   }else
