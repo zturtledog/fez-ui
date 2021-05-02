@@ -23,6 +23,7 @@ function I_AM_UI_Create_UI_engine(ammount)
     boolean_index[i] = false;
     color_dragging[i] = false;
     slider_index[i] = 0;
+    slider_map[i] = 0;
     color_SH = 0;
     colorPosX[i] = 0;
     colorPosY[i] = 0;
