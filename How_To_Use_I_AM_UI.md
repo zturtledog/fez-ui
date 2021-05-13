@@ -38,7 +38,6 @@ to get started:
     }
 
 - types of object
--- I_AM_UI_Slider(x,y,min,max,width,height,index,direction,corner_size);                                  its a slider.
 -- I_AM_UI_Button(x,y,width,height,text,text_size,text_offset_x,text_offset_y,m,index,corner_size);       its a button
 -- I_AM_UI_hyperect(x,y,width,height,corner_size);                                                        rectangle with more verticies 
 -- I_AM_UI_bool(x,y,width,height,index,text_if_true,text_if_false,corner_size);                           its a toggle
