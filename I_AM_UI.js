@@ -1,6 +1,4 @@
 let bool_index = [];
-let slider_index = [];
-let slider_map = [];
 let clicked = [];
 let boolean_index = [];
 let dragging = [];
@@ -22,8 +20,6 @@ function I_AM_UI_Create_UI_engine(ammount)
     dragging[i] = false;
     boolean_index[i] = false;
     color_dragging[i] = false;
-    slider_index[i] = 0;
-    slider_map[i] = 0;
     color_SH = 0;
     colorPosX[i] = 0;
     colorPosY[i] = 0;
@@ -56,39 +52,6 @@ function I_AM_UI_Update_MD_Engine()
     color_dragging[i] = true;
     dragging[i] = true;
   }
-}
-
-function I_AM_UI_Slider(x,y,min,max,w,h,i,d,c)
-{
-  if (dragging[i] == true && mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h)
-  {
-    if (d == 1)
-    {
-      slider_index[i] = mouseX-x;
-      slider_map[i] = round(map(mouseX-x,0,x,min,max))*2;
-      dragging[i] = false;
-    }else
-    {
-      slider_index[i] = mouseY-y;
-      slider_map[i] = round(map(mouseY-y, 0, y, min, max))*2;
-      dragging[i] = false;
-    }
-  }else
-  {
-    dragging[i] = false;
-  }
-  
-  I_AM_UI_hyperect(x,y,w,h,c);
-  
-  if (d == 1)
-  {
-    I_AM_UI_hyperect(x,y,slider_index[i],h,c);
-  }else
-  {
-    I_AM_UI_hyperect(x,y,w,slider_index[i],c);
-  }
-  
-  return(slider_map[i]);
 }
 
 function I_AM_UI_Button(x,y,w,h,t,s,ox,oy,m,i,c)
