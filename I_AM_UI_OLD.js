@@ -1,3 +1,9 @@
+/*
+
+this version is depricated and should not be used, instead use i-am-ui-new.js located in the same repo.
+
+*/
+
 let bool_index = [];
 let clicked = [];
 let boolean_index = [];
