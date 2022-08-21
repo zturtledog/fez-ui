@@ -39,9 +39,11 @@ it is important to put `uiupd()` at the end of your draw function
 like this:
 ```js
 function draw() {
+  background(220);
+
   //your code here!
   
-  uiupd()
+  uiupd();
 }
 ```
 
