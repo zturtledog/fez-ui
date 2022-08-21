@@ -14,11 +14,12 @@ iiil\
 gridlock
 
 #### ui
-vslider\
-slider\
-slider2d\
-onelinetext\
-checkbox
+[button](https://github.com/zturtledog/I_AM_UI/wiki/ui#button)\
+[vslider](https://github.com/zturtledog/I_AM_UI/wiki/ui#vslider)\
+[slider](https://github.com/zturtledog/I_AM_UI/wiki/ui#slider)\
+[slider2d](https://github.com/zturtledog/I_AM_UI/wiki/ui#slider2d)\
+[onelinetext](https://github.com/zturtledog/I_AM_UI/wiki/ui#onelinetext)\
+[checkbox](https://github.com/zturtledog/I_AM_UI/wiki/ui#checkbox)
 
 #### gui
 hyperect\
