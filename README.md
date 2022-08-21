@@ -31,7 +31,7 @@ draggables    --a window lke structure that can be dragged(offset can be applied
 
 ## getting started
 
-import i-am-ui into your project\
+import i-am-ui-new.js into your project\
 it is important to put `uiupd()` at the end of your draw function
 
 like this:
