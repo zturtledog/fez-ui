@@ -23,6 +23,10 @@ function gridlock(g,m) {
   return round(g/m)*m
 }
 
+function clamp(v,m,x) {
+  return v>x?x:(v<m?m:v)
+}
+
 //shape
 
 function centredtext(_text, x, y) {
@@ -50,9 +54,10 @@ function uiupd() {
 
 //function
 
-function button(x, y, w, h) {
+function button(x, y, w, h, r) {
+  if (!r) rect(x,y,w,h,5)
+  
   if (hitbox(x, y, w, h, mouseX, mouseY)) {
-    noStroke();
     fill("#dddddd44");
     rect(x, y, w, h, 5);
     cursor(HAND);
@@ -83,7 +88,7 @@ function checkbox(v,x,y,w,h,r) {
 }
 
 function vslider(v, x, y, h, m, f, r, g) {
-  let uy = map(v, m, f, y, y + h);
+  let uy = clamp(map(v, m, f, y, y + h),y,y+h);
 
   if (!r) {noFill();
   line(x, y, x, uy - 5);
@@ -95,13 +100,13 @@ function vslider(v, x, y, h, m, f, r, g) {
     if (mouseIsPressed) {
       cursor("grabbing")
       if (keyIsDown(17) && g) {
-        return gridlock(map(mouseY, y, y + h, m, f),g);
+        return clamp(gridlock(map(mouseY, y, y + h, m, f),g),m,f);
       }
-      return map(mouseY, y, y + h, m, f);
+      return clamp(map(mouseY, y, y + h, m, f),m,f);
     }
   }
 
-  return v;
+  return clamp(v,m,f);
 }
 
 function slider(v, x, y, w, m, f,r,g) {
@@ -117,18 +122,21 @@ function slider(v, x, y, w, m, f,r,g) {
     if (mouseIsPressed) {
       cursor("grabbing")
       if (keyIsDown(17) && g) {
-        return gridlock(map(mouseX, x, x + w, m, f),g);
+        return clamp(gridlock(map(mouseX, x, x + w, m, f),g),m,f);
       }
-      return map(mouseX, x, x + w, m, f);
+      return clamp(map(mouseX, x, x + w, m, f),m,f);
     }
   }
 
-  return v;
+  return clamp(v,m,f);
 }
 
 function slider2d(v, x, y, w, h, mw, fw, mh, fh, r, g) {
-  let ux = map(v.x, mw, fw, x, x+w);
-  let uy = map(v.y, mh, fh, y, y+h);
+  let ux = map(v.x-1, mw, fw, x, x+w);
+  let uy = map(v.y-1, mh, fh, y, y+h);
+  
+  v.x = clamp(v.x,mw,fw)
+  v.y = clamp(v.y,mh,fh)
 
   if (!r) {
     noFill();
@@ -139,20 +147,20 @@ function slider2d(v, x, y, w, h, mw, fw, mh, fh, r, g) {
     line(ux+5,y+h,ux+5,uy+10)
     rect(ux,uy, 10, 10, 3);
   }
-
-  if (hitbox(x, y, w, h, mouseX, mouseY)) {
+  
+  if (hitbox(x-1, y-1, w+2, h+2, mouseX, mouseY)) {
     cursor("grab")
     if (mouseIsPressed) {
       cursor("grabbing")
       if (keyIsDown(17) && g) {
         return {
-          x:gridlock(map(mouseX-5, x, x + w, mw, fw),g),
-          y:gridlock(map(mouseY-5, y, y + h, mh, fh),g)
+          x:gridlock(map(mouseX-5, x, x + w, mw, fw),g)+1,
+          y:gridlock(map(mouseY-5, y, y + h, mh, fh),g)+1
         };
       }
       return {
-        x:map(mouseX-5, x, x + w, mw, fw),
-        y:map(mouseY-5, y, y + h, mh, fh)
+        x:map(mouseX-5, x, x + w, mw, fw)+1,
+        y:map(mouseY-5, y, y + h, mh, fh)+1
       };
     }
   }
