@@ -1,19 +1,19 @@
 # I_AM_UI
 
-### about
+## about
 a ui library for p5.js
 
 it is greatly sugested to use the much more versitile and efficient i-am-ui-new.js.
 
 please note that the new version is vastly different from the old version.
 
-### a list of features:
-#### util
+## a list of features:
+### util
 hitbox\
 iiil\
 gridlock
 
-#### ui
+### ui
 [button](https://github.com/zturtledog/I_AM_UI/wiki/ui#button)\
 [vslider](https://github.com/zturtledog/I_AM_UI/wiki/ui#vslider)\
 [slider](https://github.com/zturtledog/I_AM_UI/wiki/ui#slider)\
@@ -21,15 +21,15 @@ gridlock
 [onelinetext](https://github.com/zturtledog/I_AM_UI/wiki/ui#onelinetext)\
 [checkbox](https://github.com/zturtledog/I_AM_UI/wiki/ui#checkbox)
 
-#### gui
+### gui
 hyperect\
 centeredtext
 
-### comming someday
+## comming someday
 colorpicker\
 draggables    --a window lke structure that can be dragged(offset can be applied)
 
-### getting started
+## getting started
 
 import i-am-ui into your project\
 it is important to put `uiupd()` at the end of your draw function
@@ -43,4 +43,4 @@ function draw() {
 }
 ```
 
-##### see wiki for the docs
+#### see wiki for the docs
