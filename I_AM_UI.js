@@ -1,5 +1,7 @@
 /*
 
+THIS IS IMPORTANT FOR THOSE WHO SEEK TO USE THIS LIBRARY:
+
 this version is depricated and should not be used, instead use i-am-ui-new.js located in the same repo.
 
 */
