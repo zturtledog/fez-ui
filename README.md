@@ -6,7 +6,6 @@ a ui library for p5.js
 it is greatly sugested to use the much more versitile and efficient i-am-ui-new.js.
 
 please note that the new version is vastly different from the old version.\
-also please note that i-am-ui-new is mobile compatable with exeption of onelinetext*\
 all acessibily such as tts or tactile response is not included.
 
 #### [live example](https://editor.p5js.org/the.spiderminecart/full/asgzWhISk)
