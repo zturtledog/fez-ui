@@ -27,6 +27,12 @@ function clamp(v,m,x) {
   return v>x?x:(v<m?m:v)
 }
 
+function lop(t,f) {
+  for (let i = 0; i < t; i++) {
+    f(i)
+  }
+}
+
 //shape
 
 function centredtext(_text, x, y) {
