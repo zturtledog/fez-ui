@@ -192,6 +192,8 @@ class onelinetext {
   }
   
   update() {
+    textSize(this.s)
+    
     this.w = textWidth(this.text);
     
     //inbound cursor
@@ -290,6 +292,8 @@ class onelinetext {
   
   draw() {
     let data = [this.text.substring(0,this.cursor),this.text.substring(this.cursor)]
+    
+    textSize(this.s)
     
     //draw
     
