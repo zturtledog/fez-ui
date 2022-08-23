@@ -19,6 +19,10 @@ function iiil(t,l) {
   return false
 }
 
+function iiis(t,l) {
+  return !!l.split("").find(e=>e==t)
+}
+
 function gridlock(g,m) {
   return round(g/m)*m
 }
@@ -166,6 +170,29 @@ function slider2d(v, x, y, w, h, mw, fw, mh, fh, r, g) {
   }
 
   return v;
+}
+
+//permanence
+
+function poperror(rndr,w) {
+  noLoop()
+  
+  rndr()
+  
+  let tmr = 0
+  
+  let o = ()=>{
+    setTimeout(()=>{
+      if (mouseIsPressed && tmr>=w) {
+        loop()
+        pdown = !true
+      }else{
+        rndr()
+        o()
+        tmr++
+      }
+    },0)
+  };o()
 }
 
 //classes
@@ -342,3 +369,4 @@ class onelinetext {
     line(this.x,this.y+2,this.x+(this.w < 10 ? 10 : this.w),this.y+2)
   }
 }
+
