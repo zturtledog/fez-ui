@@ -19,6 +19,10 @@ function iiil(t,l) {
   return false
 }
 
+function iiis(t,l) {
+  return !!l.split("").find(e=>e==t)
+}
+
 function gridlock(g,m) {
   return round(g/m)*m
 }
@@ -174,6 +178,29 @@ function slider2d(v, x, y, w, h, mw, fw, mh, fh, r, g) {
   return v;
 }
 
+//permanence
+
+function poperror(rndr,w) {
+  noLoop()
+  
+  rndr()
+  
+  let tmr = 0
+  
+  let o = ()=>{
+    setTimeout(()=>{
+      if (mouseIsPressed && tmr>=w) {
+        loop()
+        pdown = !true
+      }else{
+        rndr()
+        o()
+        tmr++
+      }
+    },0)
+  };o()
+}
+
 //classes
 
 //@note key repermanace bug (p[a]p[s]r[a])
@@ -185,17 +212,40 @@ class onelinetext {
     this.y = y
     this.s = s||20
     this.cursor = 1
+    this.spkeydic = {}
   }
+  
+  //setters
   
   position(x,y) {
     this.x = x
     this.y = y
   }
   
+  size(s) {
+    this.s = s
+  }
+  
+  //events
+  
+  enter(f) {
+    this.entr = f
+  }
+  
+  charpressed(f) {
+    this.cpress = f
+  }
+  
+  sckey(k,f) {
+    this.spkeydic[k] = f
+  }
+  
+  //important
+  
   salad() {
     this.text = "salad"
     this.cursor = 0
-  }
+  } //this is the most important function
   
   update() {
     textSize(this.s)
@@ -222,7 +272,8 @@ class onelinetext {
         this.cursor++;
         this.cursorkeyleft = true
         this.cursorkeyleftime++
-      }else{
+      }
+      else{
         this.cursorkeyleft = false
         this.cursorkeyleftime = 0
       }
@@ -233,9 +284,15 @@ class onelinetext {
         this.cursor--;
         this.cursorkeyright = true
         this.cursorkeyrightime++
-      }else{
+      }
+      else{
         this.cursorkeyright = false
         this.cursorkeyrightime = 0
+      }
+      
+      //enter
+      if (keyIsDown(13)) {
+        if (this.entr) this.entr(this,this.text)
       }
       
       //delete previous char
@@ -246,7 +303,8 @@ class onelinetext {
         }
         this.cursorkeydel = true
         this.cursorkeydeltime++
-      }else{
+      }
+      else{
         this.cursorkeydel = false
         this.cursorkeydeltime = 0
       }
@@ -260,6 +318,9 @@ class onelinetext {
           if (keyIsDown(keyCode)) {
             this.cursor++
             this.text = data[0]+key+data[1]
+            
+            if (this.cpress) this.cpress(this,this.text,key)
+            if (this.spkeydic[key]) this.spkeydic[key](this)
           }        
         }
         this.cursorkey = true
@@ -314,3 +375,4 @@ class onelinetext {
     line(this.x,this.y+2,this.x+(this.w < 10 ? 10 : this.w),this.y+2)
   }
 }
+
