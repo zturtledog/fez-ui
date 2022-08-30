@@ -13,7 +13,7 @@ library can be used with jsdelivr:
 <script src="https://cdn.jsdelivr.net/gh/zturtledog/I_AM_UI/i-am-ui-new.js"></script>
 ```
 
-#### [live example](https://editor.p5js.org/the.spiderminecart/full/asgzWhISk)
+#### [live example](https://editor.p5js.org/the.spiderminecart/full/PeLTnsMH5)
 
 ## a list of features:
 ### util
@@ -52,5 +52,9 @@ function draw() {
   uiupd();
 }
 ```
+
+## example project
+
+[![image](https://user-images.githubusercontent.com/71353802/186051464-0802a68e-1986-48d5-8b6c-cace418368bd.png)](https://editor.p5js.org/the.spiderminecart/full/PeLTnsMH5)
 
 #### see wiki for the docs
