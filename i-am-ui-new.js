@@ -69,7 +69,7 @@ function button(x, y, w, h, r) {
   
   if (hitbox(x, y, w, h, mouseX, mouseY)) {
     fill("#dddddd44");
-    rect(x, y, w, h, 5);
+    rect(x, y, w, h, r||5);
     cursor(HAND);
   }
 
