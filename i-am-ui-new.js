@@ -5,6 +5,46 @@ let keys = "`1234567890-=\tqwertyuiop[]\\asdfghjkl;'zxcvbnm,./ ~!@#$%^&*()_+QWER
 
 let pdown
 
+//kpi
+let keylist = {};
+document.addEventListener("keydown", (event) => {
+  let posi = {
+    key: event.key,
+    code: event.code,
+    which: event.keyCode,
+    location:event.location,
+    
+    ctrl: event.ctrlKey,
+    shift: event.shiftKey,
+    alt: event.altKey,
+    meta: event.metaKey,
+  
+    unique: true
+  };
+  
+  event.preventDefault()
+  
+  if (!keylist[event.key])
+  keylist[event.key] = posi;
+  
+  return false
+});
+document.addEventListener("keyup", (e) => {
+  keylist[event.key] = false;
+});
+function keydown(code) {
+  return !!keylist[code]
+}
+function keytapd(code) {
+  return !!(keylist[code] && keylist[code].unique)
+}
+function ukpi() {
+  for (let prp in keylist) {
+    if (keylist[prp])
+    keylist[prp].unique = false
+  }
+}
+
 //util
 
 function hitbox(x, y, w, h, px, py) {
