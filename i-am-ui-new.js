@@ -100,6 +100,7 @@ function hyperect(x,y,w,h,c) {
 
 function uiupd() {
   pdown = mouseIsPressed
+  ukpi()
 }
 
 //function
