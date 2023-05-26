@@ -1,4 +1,9 @@
-# I_AM_UI
+# fez-ui
+
+## regarding the name change
+i changed the name because it was too similar to [dear-imgui](https://github.com/ocornut/imgui)\
+also "i-am-ui" wasn't very creative\
+the names of the files will stay the same to keep compatibility
 
 ## about
 a ui library for p5.js
@@ -10,7 +15,7 @@ all acessibily such as tts or tactile response is not included.
 
 library can be used with jsdelivr: 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/zturtledog/I_AM_UI/i-am-ui-new.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/zturtledog/fez-ui/i-am-ui-new.js"></script>
 ```
 
 #### [live example](https://editor.p5js.org/the.spiderminecart/full/PeLTnsMH5)
@@ -22,12 +27,12 @@ iiil\
 gridlock
 
 ### ui
-[button](https://github.com/zturtledog/I_AM_UI/wiki/ui#button)\
-[vslider](https://github.com/zturtledog/I_AM_UI/wiki/ui#vslider)\
-[slider](https://github.com/zturtledog/I_AM_UI/wiki/ui#slider)\
-[slider2d](https://github.com/zturtledog/I_AM_UI/wiki/ui#slider2d)\
-[onelinetext](https://github.com/zturtledog/I_AM_UI/wiki/ui#onelinetext)\
-[checkbox](https://github.com/zturtledog/I_AM_UI/wiki/ui#checkbox)
+[button](https://github.com/zturtledog/fez-ui/wiki/ui#button)\
+[vslider](https://github.com/zturtledog/fez-ui/wiki/ui#vslider)\
+[slider](https://github.com/zturtledog/fez-ui/wiki/ui#slider)\
+[slider2d](https://github.com/zturtledog/fez-ui/wiki/ui#slider2d)\
+[onelinetext](https://github.com/zturtledog/fez-ui/wiki/ui#onelinetext)\
+[checkbox](https://github.com/zturtledog/fez-ui/wiki/ui#checkbox)
 
 ### gui
 hyperect\
