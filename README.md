@@ -38,6 +38,11 @@ gridlock
 hyperect\
 centeredtext
 
+### kpi
+kpi is an updated input system that makes it easier to handle key input\
+keydown\
+keytapd
+
 ## comming someday
 colorpicker\
 draggables    --a window lke structure that can be dragged(offset can be applied)
