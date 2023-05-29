@@ -43,7 +43,7 @@ kpi is an updated input system that makes it easier to handle key input\
 keydown\
 keytapd
 
-## comming someday (maybe)
+## coming someday (maybe)
 colorpicker\
 draggables       -- a window lke structure that can be dragged(offset can be applied)\
 survansii suport -- a type of string formating\
@@ -70,3 +70,5 @@ function draw() {
 [![image](https://user-images.githubusercontent.com/71353802/186051464-0802a68e-1986-48d5-8b6c-cace418368bd.png)](https://editor.p5js.org/the.spiderminecart/full/PeLTnsMH5)
 
 #### see wiki for the docs
+note that it is a perpetual work in progress.\
+also apologies for any spelling errors.
