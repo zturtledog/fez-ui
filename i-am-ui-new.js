@@ -4,6 +4,7 @@ let keys = "`1234567890-=\tqwertyuiop[]\\asdfghjkl;'zxcvbnm,./ ~!@#$%^&*()_+QWER
 //permance
 
 let pdown
+let umouse
 
 //kpi
 let keylist = {};
@@ -100,6 +101,7 @@ function hyperect(x,y,w,h,c) {
 
 function uiupd() {
   pdown = mouseIsPressed
+  umouse = false
   ukpi()
 }
 
@@ -133,6 +135,22 @@ function checkbox(v,x,y,w,h,r) {
   
   if (button(x,y,w,h)) {
     return !v
+  }
+  
+  return v
+}
+
+function draggable(v,w,h) {
+  if (hitbox(v.x, v.y, w, h, mouseX, mouseY) && 
+      !umouse && mouseIsPressed && mouseIsPressed != pmouse) {
+    v.drive = true
+  }
+  if (!mouseIsPressed) v.drive = false
+  if (v.drive) {
+    umouse = true
+    
+    v.x -= pmouseX-mouseX
+    v.y -= pmouseY-mouseY
   }
   
   return v
