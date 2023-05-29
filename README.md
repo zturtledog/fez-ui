@@ -32,7 +32,7 @@ gridlock
 [slider](https://github.com/zturtledog/fez-ui/wiki/ui#slider)\
 [slider2d](https://github.com/zturtledog/fez-ui/wiki/ui#slider2d)\
 [onelinetext](https://github.com/zturtledog/fez-ui/wiki/ui#onelinetext)\
-[checkbox](https://github.com/zturtledog/fez-ui/wiki/ui#checkbox)
+[checkbox](https://github.com/zturtledog/fez-ui/wiki/ui#checkbox)\
 [draggable](https://github.com/zturtledog/fez-ui/wiki/ui#draggable)
 
 ### gui
