@@ -43,11 +43,14 @@ kpi is an updated input system that makes it easier to handle key input\
 keydown\
 keytapd
 
-## coming someday (maybe)
+## coming someday (maybe) 
+*(feature creep be like)*\
 colorpicker\
-draggables       -- a window lke structure that can be dragged(offset can be applied)\
-survansii suport -- a type of string formating\
-graphs           -- like with equations and things.
+draggables        -- a window lke structure that can be dragged(offset can be applied)\
+    |- dragable docks  --to manage the positions of windows
+survansii support -- a type of string formating\
+graphs            -- like with equations and things.\
+theme systems     -- a way of managing color themes
 
 ## getting started
 
