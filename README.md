@@ -33,6 +33,7 @@ gridlock
 [slider2d](https://github.com/zturtledog/fez-ui/wiki/ui#slider2d)\
 [onelinetext](https://github.com/zturtledog/fez-ui/wiki/ui#onelinetext)\
 [checkbox](https://github.com/zturtledog/fez-ui/wiki/ui#checkbox)
+[draggable](https://github.com/zturtledog/fez-ui/wiki/ui#draggable)
 
 ### gui
 hyperect\
@@ -46,8 +47,6 @@ keytapd
 ## coming someday (maybe) 
 *(feature creep be like)*\
 colorpicker\
-draggables        -- a window lke structure that can be dragged(offset can be applied)\
-    |- dragable docks  --to manage the positions of windows\
 graphics portals  -- a hole in the scene to another graphics instance (a wrapper of p5.Graphics)\
 survansii support -- a type of string formating\
 graphs            -- like with equations and things.\
