@@ -142,7 +142,7 @@ function checkbox(v,x,y,w,h,r) {
 
 function draggable(v,w,h) {
   if (hitbox(v.x, v.y, w, h, mouseX, mouseY) && 
-      !umouse && mouseIsPressed && mouseIsPressed != pmouse) {
+      !umouse && mouseIsPressed && mouseIsPressed != umouse) {
     v.drive = true
   }
   if (!mouseIsPressed) v.drive = false
